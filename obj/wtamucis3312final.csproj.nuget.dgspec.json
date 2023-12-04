@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/wtamucis3312final.csproj": {}
+  },
+  "projects": {
+    "/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/wtamucis3312final.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/wtamucis3312final.csproj",
+        "projectName": "wtamucis3312final",
+        "projectPath": "/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/wtamucis3312final.csproj",
+        "packagesPath": "/Users/jessicazoll/.nuget/packages/",
+        "outputPath": "/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jessicazoll/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/obj/Debug/net8.0/wtamucis3312final.csproj.AssemblyReference.cache
+/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/obj/Debug/net8.0/wtamucis3312final.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/obj/Debug/net8.0/wtamucis3312final.AssemblyInfoInputs.cache
+/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/obj/Debug/net8.0/wtamucis3312final.AssemblyInfo.cs
+/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/obj/Debug/net8.0/wtamucis3312final.csproj.CoreCompileInputs.cache
+/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/obj/Debug/net8.0/wtamucis3312final.MvcApplicationPartsAssemblyInfo.cache
+/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/obj/Debug/net8.0/wtamucis3312final.RazorAssemblyInfo.cache
+/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/obj/Debug/net8.0/wtamucis3312final.RazorAssemblyInfo.cs
+/Users/jessicazoll/School/2023/Fall/ABP CIDM 3312/Final/wtamucis3312final/obj/Debug/net8.0/wtamucis3312final.sourcelink.json
