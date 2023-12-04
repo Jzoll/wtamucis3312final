@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/wtamucis3312final.props" />
+</Project>

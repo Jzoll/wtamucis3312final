@@ -1,13 +1,26 @@
-using Microsoft.EntityFrameworkCore;
+//Dependency injection part 1
 using Final.Models;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+//Dependency injection part 1
+builder.Services.AddDbContext<FinalDbContext>(
+    options => options.UseSqlite(builder.Configuration.GetConnectionString("FinalDbContext"))
+);
+
 var app = builder.Build();
+
+//Step 7
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
