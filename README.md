@@ -87,4 +87,6 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools
 dotnet aspnet-codegenerator razorpage -m NationalPark -dc Final.Models.FinalDbContext -udl -outDir Pages/NationalParks --referenceScriptLibraries --databaseProvider sqlite
 ```
 
-# Step 9: Sorting
+# Step 9: Pagination and Sorting
+First Sort then Page in code!
+Amazon website pagination button is goals

@@ -34,12 +34,29 @@ namespace wtamucis3312final.Pages.NationalParks
         public int MaxPageNum =>
             (int)Math.Ceiling(_context.NationalParks.Count() / (double)PageSize);
 
+        [BindProperty(SupportsGet = true)]
+        public string CurrentSort { get; set; }
+
         public async Task OnGetAsync()
         {
-            NationalPark = await _context.NationalParks
-                .Skip((PageNum - 1) * PageSize)
-                .Take(PageSize)
-                .ToListAsync();
+            var query = _context.NationalParks.Select(n => n);
+
+            //Can use "http://localhost:5089/NationalParks?CurrentSort=parkName_asc" to test sorting without updating the razor page
+            switch (CurrentSort)
+            {
+                case "parkName_asc":
+                    query = query.OrderBy(p => p.ParkName);
+                    break;
+                case "parkName_desc":
+                    query = query.OrderByDescending(p => p.ParkName);
+                    break;
+                case "parkState_desc":
+                    query = query.OrderByDescending(p => p.ParkState);
+                    break;
+            }
+
+            //Paging
+            NationalPark = await query.Skip((PageNum - 1) * PageSize).Take(PageSize).ToListAsync();
         }
     }
 }
