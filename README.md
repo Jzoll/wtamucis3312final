@@ -86,3 +86,5 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools
 ```
 dotnet aspnet-codegenerator razorpage -m NationalPark -dc Final.Models.FinalDbContext -udl -outDir Pages/NationalParks --referenceScriptLibraries --databaseProvider sqlite
 ```
+
+# Step 9: Sorting

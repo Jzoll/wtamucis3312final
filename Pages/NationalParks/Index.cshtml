@@ -2,7 +2,7 @@
 @model wtamucis3312final.Pages.NationalParks.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "National Parks Index";
 }
 
 <h1>Index</h1>
@@ -23,20 +23,49 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.NationalPark) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ParkName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ParkState)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.NationalParkId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.NationalParkId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.NationalParkId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.NationalPark)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ParkName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ParkState)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.NationalParkId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.NationalParkId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.NationalParkId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+<hr />
+@* Stops the previous button from going to non-existent pages*@
+@{
+    var prevDisabled = "";
+    if (Model.PageNum <= 1)
+    {
+        prevDisabled = "disabled";
+    }
+
+    @* Stops the next button from going to non-existent pages*@
+    var nextDisabled = "";
+    if (Model.PageNum > (Model.MaxPageNum - 1))
+    {
+        nextDisabled = "disabled";
+    }
+}
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item @prevDisabled"><a class="page-link" asp-page="./Index"
+                asp-route-PageNum="@(Model.PageNum - 1)">Previous</a></li>
+        <li class="page-item">
+            <span class="page-link">Page @(Model.PageNum) of @Model.MaxPageNum</span>
+        </li>
+        <li class="page-item @nextDisabled"><a class="page-link" asp-page="./Index"
+                asp-route-PageNum="@(Model.PageNum + 1)">Next</a>
+        </li>
+    </ul>
+</nav>
