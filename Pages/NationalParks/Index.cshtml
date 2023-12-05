@@ -60,12 +60,12 @@
 <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
         <li class="page-item @prevDisabled"><a class="page-link" asp-page="./Index"
-                asp-route-PageNum="@(Model.PageNum - 1)">Previous</a></li>
+                asp-route-PageNum="@(Model.PageNum - 1)"> &lt; Previous</a></li>
         <li class="page-item">
-            <span class="page-link">Page @(Model.PageNum) of @Model.MaxPageNum</span>
+            <span class="page-link"> Page @(Model.PageNum) of @Model.MaxPageNum</span>
         </li>
         <li class="page-item @nextDisabled"><a class="page-link" asp-page="./Index"
-                asp-route-PageNum="@(Model.PageNum + 1)">Next</a>
+                asp-route-PageNum="@(Model.PageNum + 1)">Next &gt;</a>
         </li>
     </ul>
 </nav>
