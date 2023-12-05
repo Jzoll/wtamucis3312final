@@ -18,7 +18,7 @@ namespace Final.Models
     public class UserNationalParks
     {
         public int NationalParkId { get; set; } //Composite Primary Key, Foreign Key 1
-        public int UserDataId { get; set; } //Composite Primary Key, Foreign Key 1
+        public int UserDataId { get; set; } //Composite Primary Key, Foreign Key 2
 
         public NationalPark NationalPark { get; set; } = default!; //Navigation Property. One Park per UserNationalPark
         public UserData UserData { get; set; } = default!; //Navigation Property. One User per UserNationalPark

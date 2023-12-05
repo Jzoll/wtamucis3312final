@@ -14,7 +14,7 @@ builder.Services.AddDbContext<FinalDbContext>(
 
 var app = builder.Build();
 
-//Step 7
+//Step 7: Seed Data
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;

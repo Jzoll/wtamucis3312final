@@ -226,17 +226,16 @@ namespace Final.Models
 
                 List<UserNationalParks> userNationalParks = new List<UserNationalParks>
                 {
-                    new UserNationalParks { NationalParkId = 12, UserDataId = 1 },
-                    new UserNationalParks { NationalParkId = 1, UserDataId = 2 },
-                    new UserNationalParks { NationalParkId = 59, UserDataId = 3 },
+                    new UserNationalParks { NationalParkId = 1, UserDataId = 1 },
+                    new UserNationalParks { NationalParkId = 2, UserDataId = 2 },
+                    new UserNationalParks { NationalParkId = 50, UserDataId = 3 },
                     new UserNationalParks { NationalParkId = 33, UserDataId = 4 },
-                    new UserNationalParks { NationalParkId = 41, UserDataId = 5 },
-                    new UserNationalParks { NationalParkId = 50, UserDataId = 6 },
-                    new UserNationalParks { NationalParkId = 20, UserDataId = 7 },
-                    new UserNationalParks { NationalParkId = 34, UserDataId = 8 },
-                    new UserNationalParks { NationalParkId = 42, UserDataId = 9 },
+                    new UserNationalParks { NationalParkId = 24, UserDataId = 5 },
+                    new UserNationalParks { NationalParkId = 21, UserDataId = 6 },
+                    new UserNationalParks { NationalParkId = 47, UserDataId = 7 },
                 };
                 context.AddRange(userNationalParks);
+
                 context.SaveChanges();
             }
         }

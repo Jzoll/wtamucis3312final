@@ -16,7 +16,7 @@ namespace Final.Models
         }
 
         public DbSet<NationalPark> NationalParks { get; set; } = default!;
-        public DbSet<UserNationalParks> UserNationalParks { get; set; } = default!;
         public DbSet<UserData> UserData { get; set; } = default!;
+        public DbSet<UserNationalParks> UserNationalParks { get; set; } = default!;
     }
 }
