@@ -1,0 +1,40 @@
+@page
+@model wtamucis3312final.Pages.NationalParks.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>NationalPark</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NationalPark.NationalParkId" />
+            <div class="form-group">
+                <label asp-for="NationalPark.ParkName" class="control-label"></label>
+                <input asp-for="NationalPark.ParkName" class="form-control" />
+                <span asp-validation-for="NationalPark.ParkName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NationalPark.ParkState" class="control-label"></label>
+                <input asp-for="NationalPark.ParkState" class="form-control" />
+                <span asp-validation-for="NationalPark.ParkState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

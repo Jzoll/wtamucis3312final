@@ -62,3 +62,27 @@ using (var scope = app.Services.CreateScope())
     SeedData.Initialize(services);
 }
 ```
+
+# Step 8: Scafforlding
+## 8a Add necessary packages
+```
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+```
+For scaffolding, you may need to install this additional dotnet package depending on the version of .NET you have
+```
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+```
+
+
+## 8b Perform the scaffolding
+|Option|Description|
+|------|-----------|
+|-m |The name of the model (not the DbContext)|
+|-dc|The DbContext class to use including namespace.|
+|-udl|Use the default layout.|
+|-outDir|The relative output folder path to create the views.|
+|--referenceScriptLibraries|Adds _ValidationScriptsPartial to Edit and Create pages|
+```
+dotnet aspnet-codegenerator razorpage -m NationalPark -dc Final.Models.FinalDbContext -udl -outDir Pages/NationalParks --referenceScriptLibraries --databaseProvider sqlite
+```
