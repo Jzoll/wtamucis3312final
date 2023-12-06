@@ -14,10 +14,34 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NationalPark[0].ParkName)
+                @{
+                    //Alternate sort order for park name
+                    var firstSort = "parkName_asc";
+                    if (Model.CurrentSort == "parkName_asc")
+                    {
+                        firstSort = "parkName_desc";
+                    }
+                }
+                <!-- FIXME: This will forget the current pagenum! 
+                Maybe make var to keep track of current page and feed that to NationalPark[INSERT VAR HERE]-->
+                <a asp-page="./Index" asp-route-CurrentSort="@firstSort">@Html.DisplayNameFor(model =>
+                    model.NationalPark[0].ParkName)</a>
+
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NationalPark[0].ParkState)
+                @{
+                    //Alternate sort order for park state
+                    var nextSort = "parkState_asc";
+                    if (Model.CurrentSort == "parkState_asc")
+                    {
+                        nextSort = "parkState_desc";
+                    }
+                }
+                <!-- FIXME: This will forget the current pagenum!
+                Maybe make var to keep track of current page and feed that to NationalPark[INSERT VAR HERE]-->
+                <a asp-page="./Index" asp-route-CurrentSort="@nextSort">@Html.DisplayNameFor(model =>
+                    model.NationalPark[0].ParkState)</a>
+
             </th>
             <th></th>
         </tr>

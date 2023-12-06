@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Final.Models
@@ -6,9 +7,11 @@ namespace Final.Models
     {
         public int NationalParkId { get; set; } //Primary Key
 
+        [DisplayName("Park Name")]
         [Required]
         public string ParkName { get; set; } = string.Empty;
 
+        [DisplayName("Park State")]
         [Required]
         public string ParkState { get; set; } = string.Empty;
 

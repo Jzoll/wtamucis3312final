@@ -90,3 +90,7 @@ dotnet aspnet-codegenerator razorpage -m NationalPark -dc Final.Models.FinalDbCo
 # Step 9: Pagination and Sorting
 First Sort then Page in code!
 Amazon website pagination button is goals
+
+# Step 10: Many to many
+Show the users who went to the parks
+10a: Add logger to details page

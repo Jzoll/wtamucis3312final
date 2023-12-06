@@ -8,21 +8,33 @@
 <h1>Details</h1>
 
 <div>
-    <h4>NationalPark</h4>
+    <h4>National Park</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.NationalPark.ParkName)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-3">
             @Html.DisplayFor(model => model.NationalPark.ParkName)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.NationalPark.ParkState)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-3">
             @Html.DisplayFor(model => model.NationalPark.ParkState)
         </dd>
+        <hr>
+        <div>
+            <h6>Park Visitors</h6>
+            <ul>
+                @foreach (var user in Model.NationalPark.UserNationalParks)
+                {
+                    <li>
+                        @user.UserData.FirstName @user.UserData.LastName
+                    </li>
+                }
+            </ul>
+        </div>
     </dl>
 </div>
 <div>
