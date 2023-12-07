@@ -7,7 +7,7 @@ namespace Final.Models
     {
         public int NationalParkId { get; set; } //Primary Key
 
-        [DisplayName("Park Name")]
+        [DisplayName("National Park Name")]
         [Required]
         public string ParkName { get; set; } = string.Empty;
 
@@ -15,6 +15,12 @@ namespace Final.Models
         [Required]
         public string ParkState { get; set; } = string.Empty;
 
+        [DisplayName("Park Abbreviation")]
+        public string ParkAbbreviation { get; set; } = string.Empty;
+
+        [DisplayName("National Park Full Name")]
+        [Required]
+        public string ParkProperName { get; set; } = string.Empty;
         public List<UserNationalParks> UserNationalParks { get; set; } = default!; // Navigation Property. National Parks can have MANY UserNationalParks
     }
 

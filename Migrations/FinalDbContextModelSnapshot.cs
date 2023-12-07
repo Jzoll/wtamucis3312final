@@ -22,7 +22,15 @@ namespace wtamucis3312final.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("ParkAbbreviation")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("ParkName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ParkProperName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

@@ -11,11 +11,14 @@ namespace wtamucis3312final.Pages.NationalParks
 {
     public class CreateModel : PageModel
     {
+        private readonly ILogger<CreateModel> _logger;
+
         private readonly Final.Models.FinalDbContext _context;
 
-        public CreateModel(Final.Models.FinalDbContext context)
+        public CreateModel(Final.Models.FinalDbContext context, ILogger<CreateModel> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         public IActionResult OnGet()

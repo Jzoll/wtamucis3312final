@@ -24,8 +24,19 @@
                 <span asp-validation-for="NationalPark.ParkState" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="NationalPark.ParkAbbreviation" class="control-label"></label>
+                <input asp-for="NationalPark.ParkAbbreviation" class="form-control" />
+                @* <span asp-validation-for="NationalPark.ParkAbbreviation" class="text-danger"></span> *@
+            </div>
+            <div class="form-group">
+                <label asp-for="NationalPark.ParkProperName" class="control-label"></label>
+                <input asp-for="NationalPark.ParkProperName" class="form-control" />
+                <span asp-validation-for="NationalPark.ParkProperName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
         </form>
     </div>
 </div>
@@ -35,5 +46,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

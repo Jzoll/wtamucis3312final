@@ -23,6 +23,10 @@ namespace wtamucis3312final.Pages.NationalParks
 
         public NationalPark NationalPark { get; set; } = default!;
 
+        // Let user select user data to delete
+        [BindProperty]
+        public int NationalParkIdToDelete { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -44,6 +48,41 @@ namespace wtamucis3312final.Pages.NationalParks
                 NationalPark = nationalpark;
             }
             return Page();
+        }
+
+        /*
+        Goal = to delete the visitors from the parks
+        The code needs do remove the chosen entry from UserNationalParks.
+        UserNationalParks is made of a UserDataId and a NationalParkId.
+        We have the NationalParkId because it's the page we are on and it is bound to the hidden input.
+        Now we just need the UserDataId to be chosen as "asp-route-id="@user.UserData.UserDataId" from the razor page.
+        */
+        public async Task<IActionResult> OnPostDeleteUserAsync(int? id)
+        {
+            //log lets us know what's being deleted
+            _logger.LogWarning($"OnPost: UserDataId {id}, DROP {NationalParkIdToDelete}");
+            if (id == null)
+            {
+                return NotFound();
+            }
+            // Grabs UserNationalParks and looks for an entry that contains NationalParkId and UserDataId (id)
+            UserNationalParks userNpToDelete = _context.UserNationalParks.Find(
+                NationalParkIdToDelete,
+                id
+            );
+
+            //If the UserNationalParks entry exists then delete it
+            if (userNpToDelete != null)
+            {
+                _context.Remove(userNpToDelete);
+                _context.SaveChanges();
+            }
+            else
+            {
+                _logger.LogWarning("User has NOT visited park");
+            }
+
+            return RedirectToPage(new { id = id });
         }
     }
 }

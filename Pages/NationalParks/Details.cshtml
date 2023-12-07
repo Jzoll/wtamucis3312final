@@ -12,15 +12,15 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-3">
-            @Html.DisplayNameFor(model => model.NationalPark.ParkName)
+            @Html.DisplayNameFor(model => model.NationalPark.ParkProperName)
         </dt>
-        <dd class="col-sm-3">
-            @Html.DisplayFor(model => model.NationalPark.ParkName)
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.NationalPark.ParkProperName)
         </dd>
         <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.NationalPark.ParkState)
         </dt>
-        <dd class="col-sm-3">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.NationalPark.ParkState)
         </dd>
         <hr>
@@ -29,11 +29,19 @@
             <ul>
                 @foreach (var user in Model.NationalPark.UserNationalParks)
                 {
-                    <li>
-                        @user.UserData.FirstName @user.UserData.LastName
-                    </li>
+                    <form method="post">
+                        @* each item in list gets hidden input containing current national park id. This is what lets the
+                    post method know what park you are on *@
+                        <input type="hidden" asp-for="NationalParkIdToDelete" value="@user.NationalPark.NationalParkId" />
+                        <li>
+                            @user.UserData.FirstName @user.UserData.LastName <input type="submit" Value="Remove"
+                                class="btn btn-danger btn-sm my-1" asp-page-handler="DeleteUser"
+                                asp-route-id="@user.UserData.UserDataId">
+                        </li>
+                    </form>
                 }
             </ul>
+            <br>
         </div>
     </dl>
 </div>

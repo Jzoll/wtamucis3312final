@@ -17,7 +17,9 @@ namespace wtamucis3312final.Migrations
                     NationalParkId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     ParkName = table.Column<string>(type: "TEXT", nullable: false),
-                    ParkState = table.Column<string>(type: "TEXT", nullable: false)
+                    ParkState = table.Column<string>(type: "TEXT", nullable: false),
+                    ParkAbbreviation = table.Column<string>(type: "TEXT", nullable: false),
+                    ParkProperName = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
