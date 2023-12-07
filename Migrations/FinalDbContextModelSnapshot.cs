@@ -23,7 +23,6 @@ namespace wtamucis3312final.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ParkAbbreviation")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ParkName")

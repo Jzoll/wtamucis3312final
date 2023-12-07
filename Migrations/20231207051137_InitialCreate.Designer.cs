@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace wtamucis3312final.Migrations
 {
     [DbContext(typeof(FinalDbContext))]
-    [Migration("20231207042245_InitialCreate")]
+    [Migration("20231207051137_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -26,7 +26,6 @@ namespace wtamucis3312final.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ParkAbbreviation")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ParkName")

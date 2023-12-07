@@ -35,7 +35,7 @@ namespace wtamucis3312final.Pages.NationalParks
             (int)Math.Ceiling(_context.NationalParks.Count() / (double)PageSize);
 
         [BindProperty(SupportsGet = true)]
-        public string CurrentSort { get; set; }
+        public string CurrentSort { get; set; } = default!;
 
         public async Task OnGetAsync()
         {

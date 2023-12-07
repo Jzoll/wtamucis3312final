@@ -492,6 +492,76 @@ namespace Final.Models
                         LastName = "Turner",
                         Email = "david.turner@outlook.com",
                         Password = "davidsecurepass"
+                    },
+                    new UserData
+                    {
+                        FirstName = "Robin",
+                        LastName = "Woods",
+                        Email = "robin.woods@gmail.com",
+                        Password = "woodslover123"
+                    },
+                    new UserData
+                    {
+                        FirstName = "Lily",
+                        LastName = "Meadow",
+                        Email = "lily.meadow@outlook.com",
+                        Password = "meadowview456"
+                    },
+                    new UserData
+                    {
+                        FirstName = "River",
+                        LastName = "Stone",
+                        Email = "river.stone@gmail.com",
+                        Password = "stoneriver789"
+                    },
+                    new UserData
+                    {
+                        FirstName = "Sky",
+                        LastName = "Falconer",
+                        Email = "sky.falconer@outlook.com",
+                        Password = "flyinghigh123"
+                    },
+                    new UserData
+                    {
+                        FirstName = "Ocean",
+                        LastName = "Breeze",
+                        Email = "ocean.breeze@gmail.com",
+                        Password = "breezywaves456"
+                    },
+                    new UserData
+                    {
+                        FirstName = "Flora",
+                        LastName = "Blossom",
+                        Email = "flora.blossom@outlook.com",
+                        Password = "flowerpower789"
+                    },
+                    new UserData
+                    {
+                        FirstName = "Stone",
+                        LastName = "Mountain",
+                        Email = "stone.mountain@gmail.com",
+                        Password = "mountainhiker123"
+                    },
+                    new UserData
+                    {
+                        FirstName = "Meadow",
+                        LastName = "Dew",
+                        Email = "meadow.dew@outlook.com",
+                        Password = "dewdrop456"
+                    },
+                    new UserData
+                    {
+                        FirstName = "Sunny",
+                        LastName = "Meadow",
+                        Email = "sunny.meadow@gmail.com",
+                        Password = "sunshinemeadow789"
+                    },
+                    new UserData
+                    {
+                        FirstName = "Forest",
+                        LastName = "Walker",
+                        Email = "forest.walker@outlook.com",
+                        Password = "naturetrail123"
                     }
                 };
                 context.AddRange(userDatas);
@@ -516,7 +586,21 @@ namespace Final.Models
                     new UserNationalParks { NationalParkId = 3, UserDataId = 6 },
                     new UserNationalParks { NationalParkId = 4, UserDataId = 6 },
                     new UserNationalParks { NationalParkId = 5, UserDataId = 6 },
-                    new UserNationalParks { NationalParkId = 47, UserDataId = 7 },
+                    new UserNationalParks { NationalParkId = 2, UserDataId = 7 },
+                    new UserNationalParks { NationalParkId = 3, UserDataId = 7 },
+                    new UserNationalParks { NationalParkId = 4, UserDataId = 7 },
+                    new UserNationalParks { NationalParkId = 5, UserDataId = 7 },
+                    new UserNationalParks { NationalParkId = 55, UserDataId = 7 },
+                    new UserNationalParks { NationalParkId = 55, UserDataId = 8 },
+                    new UserNationalParks { NationalParkId = 55, UserDataId = 9 },
+                    new UserNationalParks { NationalParkId = 55, UserDataId = 10 },
+                    new UserNationalParks { NationalParkId = 47, UserDataId = 13 },
+                    new UserNationalParks { NationalParkId = 47, UserDataId = 14 },
+                    new UserNationalParks { NationalParkId = 47, UserDataId = 15 },
+                    new UserNationalParks { NationalParkId = 16, UserDataId = 16 },
+                    new UserNationalParks { NationalParkId = 16, UserDataId = 17 },
+                    new UserNationalParks { NationalParkId = 16, UserDataId = 18 },
+                    new UserNationalParks { NationalParkId = 47, UserDataId = 18 },
                 };
                 context.AddRange(userNationalParks);
 

@@ -29,6 +29,9 @@ namespace wtamucis3312final.Pages.NationalParks
         [BindProperty]
         public NationalPark NationalPark { get; set; } = default!;
 
+        [BindProperty]
+        public List<UserNationalParks> UserNationalParks { get; set; } = default!;
+
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {

@@ -66,7 +66,7 @@ namespace wtamucis3312final.Pages.NationalParks
                 return NotFound();
             }
             // Grabs UserNationalParks and looks for an entry that contains NationalParkId and UserDataId (id)
-            UserNationalParks userNpToDelete = _context.UserNationalParks.Find(
+            UserNationalParks? userNpToDelete = _context.UserNationalParks.Find(
                 NationalParkIdToDelete,
                 id
             );

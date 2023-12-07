@@ -18,7 +18,7 @@ namespace wtamucis3312final.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     ParkName = table.Column<string>(type: "TEXT", nullable: false),
                     ParkState = table.Column<string>(type: "TEXT", nullable: false),
-                    ParkAbbreviation = table.Column<string>(type: "TEXT", nullable: false),
+                    ParkAbbreviation = table.Column<string>(type: "TEXT", nullable: true),
                     ParkProperName = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>

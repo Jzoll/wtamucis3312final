@@ -16,7 +16,8 @@ namespace Final.Models
         public string ParkState { get; set; } = string.Empty;
 
         [DisplayName("Park Abbreviation")]
-        public string ParkAbbreviation { get; set; } = string.Empty;
+        //the "?" makes this a nullable property. Make sure migration/database is up to date!
+        public string? ParkAbbreviation { get; set; }
 
         [DisplayName("National Park Full Name")]
         [Required]
