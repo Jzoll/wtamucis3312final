@@ -1,0 +1,37 @@
+﻿@page "{searchString?}"
+@model wtamucis3312final.Pages.NationalParks.UserDataEmailSearchModel
+
+@{
+    ViewData["Title"] = "Search by Email";
+}
+
+<h1>User Park Visit Log</h1>
+
+@* Search by searchstring for email *@
+<form method="post">
+    <p>
+        User Email: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Find" asp-page-handler="ShowUserParks" />
+    <div class="form-text">
+        Enter the user email for whose visit record you want to see.
+    </div>
+    </p>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+</form>
+<hr>
+@if (Model.UserNationalParks != null)
+{
+    <h2> Parks Visited by @Model.ThisUserName </h2>
+}
+
+@if (Model.UserNationalParks != null)
+{
+    @foreach (var park in Model.UserNationalParks)
+    {
+        <li> @park.NationalPark.ParkProperName @park.NationalPark.ParkState</li> <br />
+    }
+}
+else
+{
+    <p>No parks visited</p>
+}
