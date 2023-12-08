@@ -90,10 +90,7 @@ dotnet aspnet-codegenerator razorpage -m NationalPark -dc Final.Models.FinalDbCo
 # Step 9: Pagination and Sorting
 First Sort then Page in code! <br>
 <mark>Amazon website pagination button is goals </mark><br>
-**Index page has an issue use command cmd + "f" "FIXME" to find issue**
-- [x] Clicking Previous, Next forgets CurrentSort
-- [ ] Sorting will forget the PageNum
-- [ ] How to fix?
+
 
 # Step 10: Many to many
 Show the users who went to the parks by modifying the details page.
@@ -102,8 +99,23 @@ Show the users who went to the parks by modifying the details page.
 Add pages as needed for the app.
 
 ## 11a: Details page
-Add logger to details page. Then modify the Details razor page to show the visitors.
+Add logger to details page. Then modify the Details razor page to show the visitors. Then add ability to delete national parks from the list.
 
 
 
-# FIXME:
+# FIXME! / To-Do list
+
+<mark>**Index page has an issue use command cmd + "f" "FIXME" to find issue**</mark>
+- [x] Clicking Previous, Next forgets CurrentSort
+- [x] Sorting will forget the PageNum
+
+<mark>**Edit page **</mark>
+- [x] Add the missing form bits! only park name and state are here!
+
+<mark>**Add park visited**</mark>
+- [x] Need this page to add the park to the user data visit
+- [ ] Nice to have: the page link on the bottom of the page to return to the userData parks list
+
+<mark>**UserDataIDSearch page **</mark>
+- [ ] make the thing
+- [x] Or remove this functionality

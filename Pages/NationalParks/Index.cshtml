@@ -84,12 +84,14 @@
 <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
         <li class="page-item @prevDisabled"><a class="page-link" asp-page="./Index"
-                asp-route-PageNum="@(Model.PageNum - 1)"> &lt; Previous</a></li>
+                asp-route-PageNum="@(Model.PageNum - 1)" asp-route-CurrentSort="@Model.CurrentSort"> &lt; Previous</a>
+        </li>
         <li class="page-item">
             <span class="page-link"> Page @(Model.PageNum) of @Model.MaxPageNum</span>
         </li>
+        @* adding asp-route-CurrentSort="@Model.CurrentSort" solves the issue of the page forgeting the sort*@
         <li class="page-item @nextDisabled"><a class="page-link" asp-page="./Index"
-                asp-route-PageNum="@(Model.PageNum + 1)">Next &gt;</a>
+                asp-route-PageNum="@(Model.PageNum + 1)" asp-route-CurrentSort="@Model.CurrentSort">Next &gt;</a>
         </li>
     </ul>
 </nav>

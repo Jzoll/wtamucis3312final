@@ -37,6 +37,9 @@ namespace wtamucis3312final.Pages.NationalParks
         [BindProperty]
         public string ThisUserName { get; set; } = default!;
 
+        [BindProperty]
+        public int ThisUserId { get; set; } = default!;
+
         public async Task OnGetAsync(int? id)
         {
             //if id != null, get the national parks associated with this id
@@ -51,6 +54,7 @@ namespace wtamucis3312final.Pages.NationalParks
                     .ToListAsync();
 
                 ThisUserName = user.FirstName + " " + user.LastName;
+                ThisUserId = user.UserDataId;
             }
 
             // var userEmail = from u in _context.UserData select u;
@@ -90,7 +94,7 @@ namespace wtamucis3312final.Pages.NationalParks
             }
         }
 
-        public async Task<IActionResult> OnPostDeleteParkAsync(int? id)
+        public async Task<IActionResult> OnPostDeletePark(int? id)
         {
             //log lets us know what's being deleted
             _logger.LogWarning($"OnPost: UserDataId {id}, DROP {NationalParkIdToDelete}");

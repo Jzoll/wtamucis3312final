@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wtamucis3312final")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96435166df008558a1ffc9365ccf8847990a80ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+69d8c2934dce95c3bd44f2f53f7c201da1304465")]
 [assembly: System.Reflection.AssemblyProductAttribute("wtamucis3312final")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wtamucis3312final")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

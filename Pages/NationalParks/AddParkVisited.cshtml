@@ -1,0 +1,38 @@
+﻿@page
+@model wtamucis3312final.Pages.NationalParks.AddParkVisitedModel
+@{
+    ViewData["Title"] = "Add National Park to Users Visitor Log";
+}
+<h1>Add National Park to Users Log</h1>
+
+<h4>National Park</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @if (Model.NationalParks != null)
+        {
+            <form method="post">
+                @foreach (var park in Model.NationalParks)
+                {
+                    <input type="hidden" asp-for="currentUserId" method="post" />
+                    <li> @park.ParkProperName @park.ParkState <input type="submit" Value="Add"
+                            class="btn btn-primary btn-sm my-1" asp-page-handler="AddPark" asp-route-id="@park.NationalParkId">
+                    </li>
+                    <br />
+                }
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </form>
+        }
+    </div>
+</div>
+
+<div>
+    @* need to add the a *@
+    <a asp-page="UserDataEmailSearch">Back to User List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

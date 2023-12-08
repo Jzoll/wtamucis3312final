@@ -29,7 +29,9 @@ namespace wtamucis3312final.Pages.NationalParks
                 return NotFound();
             }
 
-            var nationalpark =  await _context.NationalParks.FirstOrDefaultAsync(m => m.NationalParkId == id);
+            var nationalpark = await _context.NationalParks.FirstOrDefaultAsync(
+                m => m.NationalParkId == id
+            );
             if (nationalpark == null)
             {
                 return NotFound();
@@ -40,7 +42,7 @@ namespace wtamucis3312final.Pages.NationalParks
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostEditParkAsync()
         {
             if (!ModelState.IsValid)
             {
