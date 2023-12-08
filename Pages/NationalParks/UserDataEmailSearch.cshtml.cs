@@ -23,8 +23,9 @@ namespace wtamucis3312final.Pages.NationalParks
             _logger = logger;
         }
 
-        // [BindProperty]
-        // public IList<UserData> UserData { get; set; } = default!;
+        //Let user delete the parks from their list
+        [BindProperty]
+        public int NationalParkIdToDelete { get; set; } = default!;
 
         [BindProperty]
         public List<UserNationalParks> UserNationalParks { get; set; } = default!;
@@ -87,6 +88,34 @@ namespace wtamucis3312final.Pages.NationalParks
                 _logger.LogWarning("User not conected to input");
                 return Page();
             }
+        }
+
+        public async Task<IActionResult> OnPostDeleteParkAsync(int? id)
+        {
+            //log lets us know what's being deleted
+            _logger.LogWarning($"OnPost: UserDataId {id}, DROP {NationalParkIdToDelete}");
+            if (id == null)
+            {
+                return NotFound();
+            }
+            // Grabs UserNationalParks and looks for an entry that contains NationalParkId and UserDataId (id)
+            UserNationalParks? userNpToDelete = _context.UserNationalParks.Find(
+                NationalParkIdToDelete,
+                id
+            );
+
+            //If the UserNationalParks entry exists then delete it
+            if (userNpToDelete != null)
+            {
+                _context.Remove(userNpToDelete);
+                _context.SaveChanges();
+            }
+            else
+            {
+                _logger.LogWarning("User has NOT visited park");
+            }
+
+            return RedirectToPage(new { id = id });
         }
     }
 }

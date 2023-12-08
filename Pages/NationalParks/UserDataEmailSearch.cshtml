@@ -19,7 +19,7 @@
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 </form>
 <hr>
-@if (Model.UserNationalParks != null)
+@if (Model.ThisUserName != null)
 {
     <h2> Parks Visited by @Model.ThisUserName </h2>
 }
@@ -28,7 +28,10 @@
 {
     @foreach (var park in Model.UserNationalParks)
     {
-        <li> @park.NationalPark.ParkProperName @park.NationalPark.ParkState</li> <br />
+        <input type="hidden" asp-for="NationalParkIdToDelete" value="@park.NationalPark.NationalParkId" />
+        <li> @park.NationalPark.ParkProperName @park.NationalPark.ParkState <input type="submit" Value="Remove"
+        class="btn btn-danger btn-sm my-1" asp-page-handler="DeleteUser" asp-route-id="@park.UserData.UserDataId"></li>
+        <br />
     }
 }
 else

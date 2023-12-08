@@ -103,3 +103,7 @@ Add pages as needed for the app.
 
 ## 11a: Details page
 Add logger to details page. Then modify the Details razor page to show the visitors.
+
+
+
+# FIXME:
